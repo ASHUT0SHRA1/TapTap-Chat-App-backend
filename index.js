@@ -75,7 +75,7 @@ app.post('/login', (req, res) => {
         }
 
         const token = createToken(user._id);
-        console.log(token);
+        // console.log(token);
         res.status(200).json({ message : token,  user : user._id });
     }).catch((err) => {
         console.error("Error in finding the user", err);
